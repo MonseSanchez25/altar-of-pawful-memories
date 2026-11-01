@@ -132,7 +132,7 @@ function Candle({ pet, i }: { pet: (typeof PETS)[number]; i: number }) {
 
 function Intro({ onOpen }: { onOpen: () => void }) {
   return (
-    <div className="altar-bg fixed inset-0 z-50 flex flex-col items-center justify-center gap-8 px-6 text-center">
+    <div className="altar-bg fixed inset-0 z-30 flex flex-col items-center justify-center gap-8 px-6 text-center">
       <h1 className="font-display text-3xl text-marigold md:text-5xl">Un altar para mis peludos</h1>
       <button
         onClick={onOpen}
