@@ -210,7 +210,7 @@
 }
 @utility nose-pulse { animation: pulse-nose 1.6s ease-in-out infinite; }
 @utility rise-in { animation: rise-in 1s ease-out both; }
-@utility grow { transition: transform .35s cubic-bezier(.3,1.6,.5,1), filter .35s; &:hover { transform: scale(1.12); filter: drop-shadow(0 0 18px var(--marigold)); } }
+@utility pop-hover { transition: transform .35s cubic-bezier(.3,1.6,.5,1), filter .35s; &:hover { transform: scale(1.12); filter: drop-shadow(0 0 18px var(--marigold)); } }
 @utility marigold {
   border-radius: 9999px;
   background:

@@ -66,7 +66,7 @@ function PapelPicado() {
           <svg
             key={i}
             viewBox="0 0 60 80"
-            className={`papel grow h-20 w-14 shrink-0 md:h-24 md:w-16`}
+            className={`papel pop-hover h-20 w-14 shrink-0 md:h-24 md:w-16`}
             style={{ animationDelay: `${(i % 5) * 0.3}s` }}
           >
             <defs>
@@ -102,7 +102,7 @@ function Arch() {
         return (
           <span
             key={i}
-            className="marigold grow pointer-events-auto absolute"
+            className="marigold pop-hover pointer-events-auto absolute"
             style={{ left: `${x}%`, top: `${y}%`, width: size, height: size, translate: "-50% -50%" }}
           />
         );
@@ -113,7 +113,7 @@ function Arch() {
 
 function Candle({ pet, i }: { pet: (typeof PETS)[number]; i: number }) {
   return (
-    <figure className="grow rise-in flex flex-col items-center" style={{ animationDelay: `${0.3 + i * 0.25}s` }}>
+    <figure className="pop-hover rise-in flex flex-col items-center" style={{ animationDelay: `${0.3 + i * 0.25}s` }}>
       <div className="flame mb-1 h-14 w-8" style={{ animationDelay: `${i * 0.4}s` }} />
       <div className="h-3 w-1 bg-foreground/70" />
       <div className="relative flex h-64 w-44 flex-col items-center justify-end overflow-hidden rounded-t-[1.5rem] rounded-b-lg border-4 border-marigold bg-wax/90 p-3 shadow-[0_0_60px_-10px_var(--marigold)]">
@@ -137,15 +137,15 @@ function Intro({ onOpen }: { onOpen: () => void }) {
       <button
         onClick={onOpen}
         aria-label="Presiona la nariz para entrar"
-        className="nose-pulse grow rounded-full focus:outline-none focus-visible:ring-4 focus-visible:ring-marigold"
+        className="nose-pulse pop-hover rounded-full focus:outline-none focus-visible:ring-4 focus-visible:ring-marigold"
       >
-        <svg viewBox="0 0 200 160" className="w-56 md:w-72">
-          <path d="M100 150 C40 150 10 110 20 70 C30 25 70 10 100 10 C130 10 170 25 180 70 C190 110 160 150 100 150Z" className="fill-foreground" />
-          <path d="M100 150 C40 150 10 110 20 70 C30 25 70 10 100 10 C130 10 170 25 180 70 C190 110 160 150 100 150Z" fill="black" opacity="0.85" />
-          <ellipse cx="65" cy="90" rx="22" ry="16" className="fill-plum-deep" />
-          <ellipse cx="135" cy="90" rx="22" ry="16" className="fill-plum-deep" />
-          <path d="M100 100 V145" stroke="currentColor" strokeWidth="3" className="text-plum-deep" />
-          <ellipse cx="80" cy="40" rx="24" ry="10" fill="white" opacity="0.35" />
+        <svg viewBox="0 0 240 200" className="w-60 md:w-80">
+          <ellipse cx="120" cy="110" rx="115" ry="88" className="fill-wax" />
+          <path d="M120 135 C70 135 45 105 52 75 C60 42 92 32 120 32 C148 32 180 42 188 75 C195 105 170 135 120 135Z" className="fill-plum-deep" />
+          <ellipse cx="90" cy="92" rx="17" ry="12" className="fill-background" />
+          <ellipse cx="150" cy="92" rx="17" ry="12" className="fill-background" />
+          <path d="M120 135 V165 M120 165 Q95 185 75 168 M120 165 Q145 185 165 168" strokeWidth="5" fill="none" strokeLinecap="round" className="stroke-plum-deep" />
+          <ellipse cx="100" cy="52" rx="24" ry="8" className="fill-wax" opacity="0.4" />
         </svg>
       </button>
       <p className="font-script text-2xl text-muted-foreground">Presiona la naricita de Max para entrar</p>
@@ -169,7 +169,7 @@ function Index() {
               <Arch />
               <div className="rise-in relative z-10 mt-[12vw] text-center md:mt-36">
                 <p className="font-script text-2xl text-rosa">Día de Muertos · 2 de noviembre</p>
-                <h1 className="grow mt-2 font-display text-4xl leading-tight text-marigold md:text-7xl">
+                <h1 className="pop-hover mt-2 font-display text-4xl leading-tight text-marigold md:text-7xl">
                   Max, Felix <br /> y Anís
                 </h1>
                 <p className="mx-auto mt-4 max-w-md text-muted-foreground">
@@ -185,10 +185,10 @@ function Index() {
             <section className="relative z-10 mx-auto max-w-3xl px-6 py-16 text-center">
               <div className="mb-8 flex justify-center gap-3">
                 {Array.from({ length: 7 }, (_, i) => (
-                  <span key={i} className="marigold grow h-10 w-10" />
+                  <span key={i} className="marigold pop-hover h-10 w-10" />
                 ))}
               </div>
-              <p className="grow font-script text-3xl text-foreground md:text-4xl">
+              <p className="pop-hover font-script text-3xl text-foreground md:text-4xl">
                 "No se van, solo se adelantan. Nos esperan con la cola moviéndose."
               </p>
             </section>
